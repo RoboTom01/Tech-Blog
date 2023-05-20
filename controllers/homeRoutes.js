@@ -80,7 +80,7 @@ router.get('/comments', async (req, res) => {
     } catch (err) {
       res.status(500).json(err);
     }
-  });
+});
 
 
 
@@ -111,7 +111,7 @@ router.get('/signup', (req, res) => {
     }
   
     res.render('signup');
-  });
+});
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
@@ -121,6 +121,21 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/logout', (req, res) => {
+
+    // if (req.session.logged_in) {
+    //   res.redirect('/dashboard');
+    //   return;
+    // }
+  
+    res.render('logout');
+});
+
+router.get('/newPost', (req, res) => {
+
+    res.render('newPost');
 });
 
 module.exports = router;

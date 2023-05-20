@@ -13,10 +13,12 @@
     <nav>
         <a href="/">Home</a>
         {{#if logged_in}}
-            <a href="/dashboard">Dashboard</a>
-            <a href="/">Logout</a>
+        <a href="/newPost">New Post</a>
+        <a href="/dashboard">Dashboard</a>
+        <a href="/logout">Logout</a>
         {{/if}}
         {{#unless logged_in}}
+        <a href="/login">New Post</a>
         <a href="/login">Dashboard</a>
         <a href="/login">Login</a>
         {{/unless}}
