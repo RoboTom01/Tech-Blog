@@ -7,7 +7,7 @@ User.hasMany(Post, {
     onDelete: 'CASCADE'
 });
 
-Post.BelongsTo(User, {
+Post.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
