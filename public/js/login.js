@@ -1,4 +1,5 @@
 const loginFormHandler = async (event) => {
+    console.log("logging in")
     event.preventDefault();
   
     // Collect values from the login form
@@ -17,12 +18,13 @@ const loginFormHandler = async (event) => {
         // If successful, redirect the browser to the dashboard page
         document.location.replace('/dashboard');
       } else {
-        alert(response.statusText);
+        alert('Failed to log in');
       }
     }
   };
   
   const signupFormHandler = async (event) => {
+    console.log("signing up")
     event.preventDefault();
   
     const username = document.querySelector('#username-signup').value.trim();
@@ -38,7 +40,7 @@ const loginFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/dashboard');
       } else {
-        alert(response.statusText);
+        alert('Failed to signup');
       }
     }
   };

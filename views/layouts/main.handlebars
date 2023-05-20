@@ -10,7 +10,20 @@
 </head>
 
 <body>
+    <nav>
+        <a href="/">Home</a>
+        {{#if logged_in}}
+            <a href="/dashboard">Dashboard</a>
+            <a href="/">Logout</a>
+        {{/if}}
+        {{#unless logged_in}}
+        <a href="/login">Dashboard</a>
+        <a href="/login">Login</a>
+        {{/unless}}
+    </nav>
+
     {{{body}}}
+
 </body>
 
 </html>
